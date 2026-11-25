@@ -5,16 +5,20 @@
 
 ## 必要なもの
 
-- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)
+- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) か [Codex](https://developers.openai.com/codex)
 - Python 3.11以上と [uv](https://docs.astral.sh/uv/)（判断の計算に使う）
 
 ## インストール
+
+Claude Code では、次のようにクローンする。
 
 ```bash
 git clone https://github.com/junyatakechi/diet-process-jayt-core-logic-skill.git ~/.claude/skills/diet-process-jayt-core-logic-skill
 ```
 
-特定のプロジェクトだけで使うなら、`<プロジェクト>/.claude/skills/` の中でクローンする。
+Codex では、`~/.claude/skills/` を `~/.agents/skills/` に替えてクローンする。
+
+特定のプロジェクトだけで使うなら、`<プロジェクト>/.claude/skills/`（Codex は `<プロジェクト>/.agents/skills/`）の中でクローンする。
 
 ## セットアップ
 
@@ -23,7 +27,7 @@ git clone https://github.com/junyatakechi/diet-process-jayt-core-logic-skill.git
 ## 使い方
 
 主に、アプリケーションスキルから呼ばれる。
-直接聞くときも、`/diet-process-jayt-core-logic-skill` で名前を指名する。指名しないと、このスキルは読み込まれない。
+直接聞くときも、`/diet-process-jayt-core-logic-skill` で名前を指名する。指名しないと、このスキルは読み込まれない。Codex では、例の `/` を `$` に替えて指名する。
 
 - 「/diet-process-jayt-core-logic-skill 7日分の体重で、停滞と言っていい？」
 - 「/diet-process-jayt-core-logic-skill 体組成計の筋肉量は当てになる？」
